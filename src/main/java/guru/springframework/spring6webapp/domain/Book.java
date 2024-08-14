@@ -2,7 +2,6 @@ package guru.springframework.spring6webapp.domain;
 
 import jakarta.persistence.*;
 
-import java.util.Set;
 
 @Entity
 public class Book {
@@ -12,17 +11,6 @@ public class Book {
     private String title;
     private String isbn;
 
-    @ManyToMany
-    private Set<Author> authors;
-
-
-    public Set<Author> getAuthors() {
-        return authors;
-    }
-
-    public void setAuthors(Set<Author> authors) {
-        this.authors = authors;
-    }
 
     public Long getiD() {
         return iD;
