@@ -13,6 +13,7 @@ public class Book {
     private String isbn;
 
     @ManyToMany
+    @JoinTable(name = "author book", joinColumns = @JoinColumn(name = "book id"), inverseJoinColumns = @JoinColumn(name = "author id"))
     private Set<Author> authors;
 
 
