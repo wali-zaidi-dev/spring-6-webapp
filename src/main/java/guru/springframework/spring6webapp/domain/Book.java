@@ -13,12 +13,21 @@ public class Book {
     private String isbn;
 
     @ManyToMany
-    @JoinTable(name = "author book", joinColumns = @JoinColumn(name = "book id"), inverseJoinColumns = @JoinColumn(name = "author id"))
     private Set<Author> authors;
+
+
+    public Set<Author> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(Set<Author> authors) {
+        this.authors = authors;
+    }
 
     public Long getiD() {
         return iD;
     }
+
 
     public void setiD(Long iD) {
         this.iD = iD;
